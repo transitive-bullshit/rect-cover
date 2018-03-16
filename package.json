@@ -1,6 +1,6 @@
 {
   "name": "rect-cover",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Computes a transform between two rectangles the same way as background-size cover",
   "main": "dist",
   "browser": "dist",
