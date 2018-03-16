@@ -26,25 +26,15 @@ viewports.forEach((viewport) => {
     test(name, async (t) => {
       const {
         scale,
-        crop
+        translate
       } = rectCover(viewport, image)
 
-      t.truthy(scale[0] > 0)
-      t.truthy(scale[1] > 0)
-      t.truthy(scale[0] >= viewport.width)
-      t.truthy(scale[1] >= viewport.height)
+      t.truthy(scale > 0)
+      t.truthy(image.width * scale >= viewport.width)
+      t.truthy(image.height * scale >= viewport.height)
 
-      t.truthy(crop[0] >= 0)
-      t.truthy(crop[1] >= 0)
-      t.truthy(crop[2] > 0)
-      t.truthy(crop[3] > 0)
-
-      console.log({
-        viewport,
-        image,
-        scale,
-        crop
-      })
+      t.truthy(translate.x <= 0)
+      t.truthy(translate.y <= 0)
     })
   })
 })

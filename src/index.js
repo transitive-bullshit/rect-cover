@@ -10,16 +10,24 @@ module.exports = (viewport, image) => {
   const H0 = w / R
 
   if (H0 > h) {
+    // w, H0
+
     // constrain width; H0 is larger axis
     return {
-      scale: [ w, H0 ],
-      crop: [ 0, ((H0 - h) / 2), w, h ]
+      scale: w / W,
+      translate: {
+        x: 0,
+        y: -((H0 - h) / 2)
+      }
     }
   } else {
     // constrain height; W0 is larger axis
     return {
-      scale: [ W0, h ],
-      crop: [ ((W0 - w) / 2), 0, w, h ]
+      scale: h / H,
+      translate: {
+        x: -((W0 - w) / 2),
+        y: 0
+      }
     }
   }
 }
