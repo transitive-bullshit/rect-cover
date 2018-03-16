@@ -112,7 +112,7 @@ export default class App extends Component {
                   </p>
 
                   <p>
-                    Cover Transform: {transform}
+                    Transform: {transform}
                   </p>
                 </div>
               </div>
