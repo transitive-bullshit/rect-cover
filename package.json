@@ -1,0 +1,21 @@
+{
+  "name": "rect-cover",
+  "version": "1.0.0",
+  "description": "Computes a transform between two rectangles the same way as background-size cover",
+  "main": "index.js",
+  "repository": "transitive-bullshit/rect-cover",
+  "author": "Travis Fischer <travis@automagical.ai>",
+  "license": "MIT",
+  "scripts": {
+    "test": "ava -v && standard"
+  },
+  "keywords": [
+    "rect",
+    "cover",
+    "background-size"
+  ],
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "standard": "^11.0.0"
+  }
+}
