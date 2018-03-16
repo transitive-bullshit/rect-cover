@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Computes a transform between two rectangles the same way as background-size cover",
   "main": "dist",
+  "browser": "dist",
   "repository": "transitive-bullshit/rect-cover",
   "author": "Travis Fischer <travis@automagical.ai>",
   "license": "MIT",
@@ -11,7 +12,9 @@
   "scripts": {
     "build": "babel src -d dist",
     "prepare": "yarn run build",
-    "test": "ava -v && standard"
+    "test": "ava -v && standard",
+    "predeploy": "cd demo && yarn install && yarn run build",
+    "deploy": "gh-pages -d demo/build"
   },
   "keywords": [
     "rect",
@@ -22,6 +25,7 @@
     "ava": "^0.25.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "gh-pages": "^1.1.0",
     "standard": "^11.0.0"
   }
 }
