@@ -9,6 +9,9 @@
   "license": "MIT",
   "module": "index.js",
   "jsnext:main": "index.js",
+  "engines": {
+    "node": ">=6"
+  },
   "scripts": {
     "build": "babel index.js -d dist",
     "prepare": "yarn run build",
