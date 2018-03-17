@@ -7,10 +7,10 @@
   "repository": "transitive-bullshit/rect-cover",
   "author": "Travis Fischer <travis@automagical.ai>",
   "license": "MIT",
-  "module": "src",
-  "jsnext:main": "src",
+  "module": "index.js",
+  "jsnext:main": "index.js",
   "scripts": {
-    "build": "babel src/index.js -d dist",
+    "build": "babel index.js -d dist",
     "prepare": "yarn run build",
     "test": "ava -v && standard src",
     "predeploy": "cd demo && yarn install && yarn run build",
