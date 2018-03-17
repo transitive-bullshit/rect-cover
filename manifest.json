@@ -1,6 +1,6 @@
 {
-  "short_name": "react-block-image",
-  "name": "react-block-image",
+  "short_name": "rect-cover",
+  "name": "rect-cover",
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",
