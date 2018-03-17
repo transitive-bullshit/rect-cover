@@ -23,14 +23,12 @@ const rectCover = require('rect-cover')
 
 const {
   scale,
-  crop
-} = rectCover({
-  width: 500,
-  height: 500
-}, {
-  width: 1280,
-  height: 720
-})
+  translate
+} = rectCover({ width: 500, height: 500 }, { width: 1280, height: 720 })
+
+// CSS transforms apply the rightmost operation first.
+// Note that this assumes a transform-origin of `top left`.
+const transform = `translate(${translate.x}px, ${translate.y}px) scale(${scale})`
 ```
 
 ## API
@@ -40,16 +38,6 @@ const {
 Returns a 2D affine transform defined by `{ scale: Number, translate: { x: Number, y: Number } }` such that the given `image` will fully cover the `viewport` while maintaining its original aspect ratio.
 
 Note that you'll want to apply the `scale` transform first followed by the `translate`.
-
-In terms of CSS transforms, this would look like:
-
-```js
-const { scale, translate } = rectCover(viewport, image)
-
-// CSS transforms apply the rightmost operation first
-// note that this assumes a transform-origin of `top left`
-const transform = `translate(${translate.x}px, ${translate.y}px) scale(${scale})`
-```
 
 #### viewport
 
