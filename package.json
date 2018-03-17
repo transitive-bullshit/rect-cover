@@ -16,7 +16,7 @@
     "build": "babel index.js -d dist",
     "prepare": "yarn run build",
     "test": "ava -v && standard src",
-    "predeploy": "cd demo && yarn install && yarn run build",
+    "predeploy": "yarn run build && cd demo && yarn install && yarn run build",
     "deploy": "gh-pages -d demo/build"
   },
   "keywords": [
